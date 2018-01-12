@@ -1,0 +1,304 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* リンクの下線を消す */
+a {
+	text-decoration: none;
+}
+
+/* clearfixの設定 */
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* header */
+
+/* header */
+header {
+	background-color: #ec715f;
+	width: 100%;
+	height: 70px;
+}
+
+.headerback {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.sitelogo {
+	width: auto;
+	height: 70px;
+	float: left;
+}
+
+/* navilist */
+nav {
+	margin: auto 0;
+	height: 70px;
+	float: right;
+}
+
+.navi-list-item {
+	height: 70px;
+	margin: 0 30px;
+	font-size: 16px;
+	float: left;
+	list-style: none;
+	display: block;
+}
+
+.navi-list-item a {
+	color: #FAFAFA;
+	display: block;
+	line-height: 70px;
+}
+
+/* main */
+
+/*共通css*/
+
+.contents {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.contents h2 {
+	padding: 90px 0 8px 0;
+	font-size: 32px;
+	color: #000000;
+}
+
+.contents .text-border-fake {
+	margin: 0 auto;
+	background-color: #ec715f;
+	width: 70px;
+	height: 3px;
+}
+
+.contents .content-text {
+	font-size: 16px;
+	color: #000000;
+	padding: 30px 0;
+}
+
+.display-block {
+	display: block;
+}
+
+/*mainvisual*/
+.mainvisual {
+	background-image: url(img/mv.png);
+	width: 100%;
+	height: 650px;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+}
+
+.mainvisual h1 {
+	padding-top: 200px;
+	font-size: 64px;
+	color: #FAFAFA;
+}
+
+.mainvisual p {
+	padding-top: 10px;
+	font-size: 20px;
+	color: #fafafa;
+}
+
+/*portfolio*/
+.portfolio {
+	width: 100%;
+	background-color: #eceff1;
+
+}
+
+.portfolio-content {
+	width: 920px;
+}
+
+.portfolio-images {
+	width: 100%;
+	padding: 30px 0 90px 0;
+}
+
+.portfolio-images-item {
+	width: 300px;
+	height: 250px;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+
+.portfolio-images-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.portfolio-images-item:nth-child(n+4) {
+	margin-bottom: 0;
+}
+
+/*feature*/
+.feature {
+	width: 100%;
+}
+
+.feature-content {
+	width: 980px;
+}
+
+.feature-item-box {
+	width: 100%;
+	padding-bottom: 90px
+}
+
+.feature-item .fa {
+	font-size: 60px;
+}
+
+.feature-item strong {
+	font-size: 20px;
+	color: #000000;
+	padding: 10px 0;
+}
+
+.feature-item {
+	width: 320px;
+	height: auto;
+	margin-right: 10px;
+	font-size: 16px;
+	color: #000000;
+	float: left;
+}
+
+.feature-item:last-child {
+	margin-right: 0;
+}
+
+.feature-item p {
+	text-align: left;
+}
+
+/*profile*/
+.profile {
+	width: 100%;
+	background-color: #eceff1;
+}
+
+.profile-content {
+	width: 1024px;
+}
+
+.profile-item-box {
+	padding-bottom: 90px;
+}
+
+.profile-image-box, .profile-text-box {
+	width: 512px;
+	float: left;
+}
+
+.profile-image {
+	width: 250px;
+	height: 250px;
+	margin: auto;
+	border-radius: 50%;
+}
+.profile-text-box {
+	text-align: left;
+}
+
+.myname, .myskills {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.myname-text, .myskills-text {
+	font-size: 16px;
+	color: #000000;
+}
+
+.myname-text {
+	margin-bottom: 8px;
+}
+
+
+/*contact*/
+.contact {
+	width: 100%;
+}
+
+.contact-content {
+	width: 800px;
+}
+
+.contact-item-box {
+	padding-bottom: 90px;
+}
+
+.contact-information-box, .contact-sns-box {
+	width: 400px;
+	margin: 0 auto;
+	float: left;
+	text-align: center;
+}
+
+.contact-information-box section, .contact-sns-box section {
+	text-align: left;
+	display: inline-block;
+}
+
+.mymail, .mytell {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.contact-information-box p {
+	border-bottom: solid 1px;
+	display: inline-block;
+}
+
+.mytell {
+	margin-top: 20px;
+}
+
+.text-sns {
+	font-size: 20px;
+	display: inline-block;
+}
+
+.contact-sns-box section .sosial {
+	margin-top: 5px;
+}
+
+.contact-sns-box .fa {
+	margin-right: 20px;
+	font-size: 50px;
+}
+
+.contact-sns-box .fa:last-child {
+	margin-right: 0px;
+}
+
+/*footer*/
+
+footer {
+	background-color: #ec715f;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+}
+
+.footer-text {
+	font-size: 16px;
+	color: #fafafa;
+	line-height: 60px;
+}
+
+
