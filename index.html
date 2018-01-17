@@ -12,22 +12,29 @@
 	<header>
 		<div class="headerback clearfix">
 			<img class="sitelogo" src="img/logo.png">
-			<nav>
-				<ul class="navi-list">
-					<li class="navi-list-item">
-						<a href="#">Portfolio</a>
-					</li>
-					<li class="navi-list-item">
-						<a href="#">Feature</a>
-					</li>
-					<li class="navi-list-item">
-						<a href="#">Profile</a>
-					</li>
-					<li class="navi-list-item">
-						<a href="#">Contect</a>
-					</li>
-				</ul>
-			</nav>
+			<div class="hamburger-menu">
+				<input id="nav-input" type="checkbox" class="nav-unshown">
+				<label id="nav-open" for="nav-input"><section><span></span></section></label>
+				<label class="nav-unshown" id="nav-close" for="nav-input"></label>
+				<div id="nav-content">
+					<nav>
+						<ul class="navi-list">
+							<li class="navi-list-item">
+								<a href="#">Portfolio</a>
+							</li>
+							<li class="navi-list-item">
+								<a href="#">Feature</a>
+							</li>
+							<li class="navi-list-item">
+								<a href="#">Profile</a>
+							</li>
+							<li class="navi-list-item">
+								<a href="#">Contect</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 		</div>
 	</header>
 	<main>
@@ -160,7 +167,9 @@
 						<p class="myskills-text display-block">
 							HTML/CSS?JavaScript/JQuery/PhotoShop
 						</p>
-				</section>
+					</section>
+				</div>
+			</div>
 		</div>
 <!-- contact -->
 		<div class="contact">

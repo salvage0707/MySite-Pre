@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+.hamburger-menu {
+	display: none;
+}
+
 /* リンクの下線を消す */
 a {
 	text-decoration: none;
@@ -15,6 +19,11 @@ a {
 	content: "";
 	display: block;
 	clear: both;
+}
+
+/*body*/
+body {
+	width: 100%;
 }
 
 /* header */
@@ -36,6 +45,23 @@ header {
 	height: 70px;
 	float: left;
 }
+
+/*header背景の高さ,幅の変更*/
+@media all and (max-width: 768px) {
+	header, .sitelogo {
+		height: 50px;
+	}
+	.headerback {
+		width: 90%;
+	}
+}
+
+
+
+/*hamburger-menuの作成途中*/
+
+
+
 
 /* navilist */
 nav {
@@ -91,6 +117,8 @@ nav {
 	display: block;
 }
 
+
+
 /*mainvisual*/
 .mainvisual {
 	background-image: url(img/mv.png);
@@ -111,6 +139,24 @@ nav {
 	padding-top: 10px;
 	font-size: 20px;
 	color: #fafafa;
+}
+
+/*header背景の高さ,幅の変更*/
+@media all and (max-width: 768px) {
+	/*背景画像の変更*/
+	.mainvisual {
+		background-image: url(img/code.png);
+		height: 750px;
+	}
+	/*mainvisual内の文字の変更*/
+	.mainvisual h1 {
+		font-size: 40px;
+		color: #fafafa;
+	}
+	.mainvisual p {
+		font-size: 18px;
+		color: #fafafa;
+	}
 }
 
 /*portfolio*/
@@ -144,6 +190,35 @@ nav {
 	margin-bottom: 0;
 }
 
+@media all and (max-width: 768px) {
+	/*コンテンツ幅の変更*/
+	.portfolio-content {
+		width: 90%;
+		padding: 0 5%;
+	}
+	/*画像を縦並びに変更*/
+	.portfolio-images-item {
+		float: none;
+		display: block;
+		margin: 10px auto 0 auto;
+	}
+	.portfolio-images-item:nth-child(1) {
+		margin-top: 0;
+	}
+	/*画像の非表示*/
+	.portfolio-images-item:nth-child(even) {
+		display: none;
+	}
+	/*打ち消し*/
+	.portfolio-images-item:nth-child(3n) {
+	margin-right: auto;
+	}
+
+	.portfolio-images-item:nth-child(n+4) {
+		margin-bottom: auto;
+	}
+}
+
 /*feature*/
 .feature {
 	width: 100%;
@@ -162,7 +237,7 @@ nav {
 	font-size: 60px;
 }
 
-.feature-item strong {
+.feature-item span {
 	font-size: 20px;
 	color: #000000;
 	padding: 10px 0;
@@ -183,6 +258,22 @@ nav {
 
 .feature-item p {
 	text-align: left;
+}
+
+@media all and (max-width: 768px) {
+	/*コンテンツ幅の変更*/
+	.feature-content {
+		width: 90%;
+		padding: 0 5%;
+	}
+	.feature-item {
+		margin: auto;
+		float: none;
+	}
+	/*打ち消し*/
+	.feature-item:last-child {
+		margin: auto;
+	}
 }
 
 /*profile*/
@@ -226,6 +317,32 @@ nav {
 
 .myname-text {
 	margin-bottom: 8px;
+}
+
+@media all and (max-width: 768px) {
+	/*コンテンツ幅の変更*/
+	.profile-content {
+		width: 90%;
+		padding: 0 5%;
+	}
+	/*縦並びに変更*/
+	.profile-image-box, .profile-text-box {
+		width: 100%;
+		float: none;
+	}
+	.profile-text-box {
+		text-align: center;
+	}
+	.myname,.myskills {
+		font-size: 20px;
+		margin: 20px 0 5px 0;
+		display: block;
+		font-family: Comic Sans MS;
+	}
+	/*打ち消し*/
+	.myname-text {
+		margin-bottom: auto;
+	}
 }
 
 
@@ -284,6 +401,33 @@ nav {
 
 .contact-sns-box .fa:last-child {
 	margin-right: 0px;
+}
+
+@media all and (max-width: 768px) {
+	/*コンテンツ幅の変更*/
+	.contact-content {
+		width: 90%;
+		padding: 0 auto;
+	}
+	/*ボックス幅、縦並びに変更*/
+	.contact-information-box, .contact-sns-box {
+		width: 400px;
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+	}
+	.contact-information-box, .contact-sns-box {
+		width: 100%;
+		margin: 0 auto;
+		float: left;
+		text-align: center;
+	}
+	/*テキスト中央揃え*/
+	.contact-information-box section, .contact-sns-box section {
+		text-align: center;
+		display: inline-block;
+	}
+
 }
 
 /*footer*/
