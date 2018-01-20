@@ -22,6 +22,7 @@ a {
 }
 
 /*body*/
+
 body {
 	width: 100%;
 }
@@ -29,16 +30,16 @@ body {
 /* header */
 
 
-/* header */
+/* headerのheader */
 header {
-	background-color: #ec715f;
+	background-color: #ec715f; /*オレンジ*/
 	width: 100%;
 	height: 70px;
 }
 
 .headerback {
 	width: 1024px;
-	margin: 0 auto;
+	margin: 0 auto; /*中央に配置*/
 }
 
 .sitelogo {
@@ -49,27 +50,21 @@ header {
 
 
 @media all and (max-width: 768px) {
-	/*画面上部に固定*/
 	header {
-		position: fixed;
+		position: fixed; /*画面上部に固定*/
 	}
-	/*header背景の高さ,幅の変更*/
+	,
 	header, .sitelogo {
-		height: 50px;
+		height: 50px; /*header背景の高さ*/
 	}
 	.headerback {
-		width: 100%;
-		z-index: 999;
-		background-color: #ec715f;
+		width: 100%; /*幅の変更*/
+		z-index: 999; /*ハンバーガーメニューより前へ*/
+		background-color: #ec715f; /*オレンジ*/
 	}
 }
 
-.display-_768 {
-	display: none;
-}
-
-
-/* navilist */
+/* headerのnav */
 nav {
 	margin: auto 0;
 	height: 70px;
@@ -105,35 +100,36 @@ nav {
 	}
 }
 
-/*hamburger-menu レスポンシブ用*/
+/* headerのhamburger-menu レスポンシブ用*/
+
+.display-_768 {
+	display: none; /*768px以上の画面の時に非表示*/
+}
 
 #nav-drawer {
   position: relative;
 }
 
-/*チェックボックス等は非表示に*/
 .nav-unshown {
-  display:none;
+  display:none;/*チェックボックス等は非表示に*/
 }
 
-/*アイコンのスペース*/
-#nav-open {
+#nav-open { /*アイコンのスペース*/
 	margin: 3px 8px 3px 8px;
 	padding: 12px 7px;
   display: inline-block;
   width: 40px;
   height: 42px;
   border: solid 1px;
-  vertical-align: middle;
+  vertical-align: middle; /*headerの縦中央に配置*/
 }
 
-/*ハンバーガーアイコンをCSSだけで表現*/
-#nav-open span, #nav-open span:before, #nav-open span:after {
+#nav-open span, #nav-open span:before, #nav-open span:after { /*ハンバーガーアイコン*/
   position: absolute;
   height: 3px;/*線の太さ*/
   width: 25px;/*長さ*/
   border-radius: 3px;
-  background: #555;
+  background: #555; /*線の色*/
   display: block;
   content: '';
   cursor: pointer;
@@ -168,33 +164,30 @@ nav {
   left: 0;
   z-index: -100;/*header背面に*/
   width: 100%;
-  height: 280px;
+  height: 280px; /*要素に合わせた高さ*/
   background: #ab7648;/*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
   transform: translateY(-100%);/*上に隠しておく*/
 }
 
-/*チェックが入ったらもろもろ表示*/
-#nav-input:checked ~ #nav-close {
-  display: block;/*カバーを表示*/
+#nav-input:checked ~ #nav-close { /*チェックが入ったらもろもろ表示*/
+  display: block; /*カバーを表示*/
   opacity: .5;
 }
 
 #nav-input:checked ~ #nav-content {
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);/*中身を表示（右へスライド）*/
+  transform: translateY(0%); /*中身を表示（下へスライド）*/
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 
 
 @media all and (max-width: 768px) {
-	/*768以下の時にハンバーガーメニュー表示*/
-	.display-_768 {	
+	.display-_768 {	/*768以下の時にハンバーガーメニュー表示*/
 		display: inline-block;
 		float: right;
 	}
-	/*navi-listを非表示*/
-	.display-768_ {
+	
+	.display-768_ { /*navi-listを非表示*/
 		display: none;
 	}
 }
@@ -258,13 +251,12 @@ nav {
 
 /*header背景の高さ,幅の変更*/
 @media all and (max-width: 768px) {
-	/*背景画像の変更*/
-	.mainvisual {
+	.mainvisual { /*背景画像の変更*/
 		background-image: url(img/code.png);
 		height: 750px;
 	}
-	/*mainvisual内の文字の変更*/
-	.mainvisual h1 {
+
+	.mainvisual h1 { /*mainvisual内の文字の変更*/
 		font-size: 40px;
 		color: #fafafa;
 	}
@@ -306,13 +298,12 @@ nav {
 }
 
 @media all and (max-width: 768px) {
-	/*コンテンツ幅の変更*/
-	.portfolio-content {
-		width: 90%;
+	.portfolio-content { /*コンテンツ幅の変更*/
+		width: 90%; 
 		padding: 0 5%;
 	}
-	/*画像を縦並びに変更*/
-	.portfolio-images-item {
+	
+	.portfolio-images-item { /*画像を縦並びに変更*/
 		float: none;
 		display: block;
 		margin: 10px auto 0 auto;
@@ -320,16 +311,17 @@ nav {
 	.portfolio-images-item:nth-child(1) {
 		margin-top: 0;
 	}
-	/*画像の非表示*/
-	.portfolio-images-item:nth-child(even) {
+
+	.portfolio-images-item:nth-child(even) { /*偶数番目の画像を非表示*/
 		display: none;
 	}
-	/*打ち消し*/
-	.portfolio-images-item:nth-child(3n) {
+
+	.portfolio-images-item:nth-child(3n) { /*元の設定に変更*/
 	margin-right: auto;
 	}
 
-	.portfolio-images-item:nth-child(n+4) {
+	.portfolio-images-item:nth-child(n+4) { /*元の設定に変更*/
+		margin-right: auto;
 		margin-bottom: auto;
 	}
 }
@@ -376,17 +368,17 @@ nav {
 }
 
 @media all and (max-width: 768px) {
-	/*コンテンツ幅の変更*/
 	.feature-content {
-		width: 90%;
+		width: 90%; /*コンテンツ幅の変更*/
 		padding: 0 5%;
 	}
+
 	.feature-item {
 		margin: auto;
 		float: none;
 	}
-	/*打ち消し*/
-	.feature-item:last-child {
+
+	.feature-item:last-child { /*元の設定に変更*/
 		margin: auto;
 	}
 }
@@ -435,28 +427,27 @@ nav {
 }
 
 @media all and (max-width: 768px) {
-	/*コンテンツ幅の変更*/
 	.profile-content {
-		width: 90%;
+		width: 90%; /*コンテンツ幅の変更*/
 		padding: 0 5%;
 	}
-	/*縦並びに変更*/
+
 	.profile-image-box, .profile-text-box {
 		width: 100%;
-		float: none;
+		float: none; /*縦並びに変更*/
 	}
 	.profile-text-box {
-		text-align: center;
+		text-align: center; /*テキストを中央揃えに*/
 	}
 	.myname,.myskills {
 		font-size: 20px;
 		margin: 20px 0 5px 0;
 		display: block;
-		font-family: Comic Sans MS;
+		font-family: Comic Sans MS; /*フォントの変更*/
 	}
-	/*打ち消し*/
+
 	.myname-text {
-		margin-bottom: auto;
+		margin-bottom: auto; /*元の設定に変更*/
 	}
 }
 
@@ -519,27 +510,24 @@ nav {
 }
 
 @media all and (max-width: 768px) {
-	/*コンテンツ幅の変更*/
 	.contact-content {
-		width: 90%;
+		width: 90%; /*コンテンツ幅の変更*/
 		padding: 0 auto;
 	}
-	/*ボックス幅、縦並びに変更*/
 	.contact-information-box, .contact-sns-box {
-		width: 400px;
-		margin: 0 auto;
-		float: none;
-		text-align: center;
+		width: 400px; /*ボックス幅の変更*/
+		margin: 0 auto;/*中央へ配置*/
+		float: none; /*縦並びに*/
+		text-align: center; /*テキストを中央揃え*/
 	}
 	.contact-information-box, .contact-sns-box {
 		width: 100%;
 		margin: 0 auto;
-		float: left;
 		text-align: center;
 	}
-	/*テキスト中央揃え*/
+
 	.contact-information-box section, .contact-sns-box section {
-		text-align: center;
+		text-align: center; /*テキスト中央揃え*/
 		display: inline-block;
 	}
 
